@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'background.dart';
-import 'package:vibration/vibration.dart';
 import 'dart:io';
 
 void main() {
@@ -109,15 +108,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                     isStopped = true;
                                     isSetTimerVisible = true;
                                   });
-                                  //TODO: play alarm when finished
-                                  // in android manifest
-                                  // <uses-permission android:name="android.permission.VIBRATE"/>
-                                  //HapticFeedback.heavyImpact(); // Works for ios
-                                  /*Vibration.vibrate(
-                                      pattern: [500, 1000, 500, 2000]);*/
 
                                   for (int i = 0; i < 3; i++) {
-                                    print('hola');
                                     HapticFeedback.vibrate();
                                     sleep(
                                       Duration(milliseconds: 1000),
