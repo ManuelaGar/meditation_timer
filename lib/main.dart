@@ -1,8 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/services.dart';
-import 'background.dart';
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:assets_audio_player/assets_audio_player.dart';
+
+import 'background.dart';
 
 void main() {
   runApp(MyApp());
@@ -34,6 +36,8 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
   bool isPaused = false;
   bool isStopped = true;
   bool isSetTimerVisible = true;
+
+  final assetsAudioPlayer = AssetsAudioPlayer();
 
   @override
   void initState() {
@@ -108,6 +112,10 @@ class _MyHomePageState extends State<MyHomePage> with TickerProviderStateMixin {
                                     isStopped = true;
                                     isSetTimerVisible = true;
                                   });
+
+                                  assetsAudioPlayer.open(
+                                    Audio("audios/flute.mp3"),
+                                  );
 
                                   for (int i = 0; i < 3; i++) {
                                     HapticFeedback.vibrate();

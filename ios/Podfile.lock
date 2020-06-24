@@ -1,22 +1,22 @@
 PODS:
-  - Flutter (1.0.0)
-  - vibration (1.4.0):
+  - assets_audio_player (0.0.1):
     - Flutter
+  - Flutter (1.0.0)
 
 DEPENDENCIES:
+  - assets_audio_player (from `.symlinks/plugins/assets_audio_player/ios`)
   - Flutter (from `Flutter`)
-  - vibration (from `.symlinks/plugins/vibration/ios`)
 
 EXTERNAL SOURCES:
+  assets_audio_player:
+    :path: ".symlinks/plugins/assets_audio_player/ios"
   Flutter:
     :path: Flutter
-  vibration:
-    :path: ".symlinks/plugins/vibration/ios"
 
 SPEC CHECKSUMS:
+  assets_audio_player: 1f5d855ea3e0484357e2efb0cb703b17959e6170
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
-  vibration: 2275f5e3ab5da73de1d948dc96c026799e08ff6d
 
 PODFILE CHECKSUM: c34e2287a9ccaa606aeceab922830efb9a6ff69a
 
-COCOAPODS: 1.9.0
+COCOAPODS: 1.9.3
